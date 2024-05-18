@@ -1,7 +1,6 @@
 // ENTRY POINT OF OUR APPLICATION
-const mongoose = require('mongoose');
-
 const dotenv = require('dotenv');
+const mongoose = require('mongoose');
 
 dotenv.config({ path: './config.env' });
 
@@ -19,11 +18,11 @@ mongoose
   .then(() => console.log('DB connection successfull'));
 
 const port = process.env.PORT || 3000;
+
 app.listen(port, () => {
   console.log(`App running on port ${port}...`);
 });
 
-// console.log(process.env);
 /* console.log(app.get('env')); 
 CHECKING THE ENV IN WHICH WE ARE WORKING
 */
